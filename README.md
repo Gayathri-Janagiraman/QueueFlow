@@ -182,7 +182,6 @@ Real-time sync was validated with **10+ concurrent tokens across live cross-tab 
 
 ## 📸 Screenshots
 
-*(Add 2–4 screenshots or a short GIF of the live queue updating — this is the single highest-impact addition you can make to this README)*
 
 ---
 
