@@ -188,7 +188,7 @@ Real-time sync was validated with **10+ concurrent tokens across live cross-tab 
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is developed for educational and portfolio purposes.
 
 ---
 
