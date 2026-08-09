@@ -182,6 +182,21 @@ Real-time sync was validated with **10+ concurrent tokens across live cross-tab 
 
 ## 📸 Screenshots
 
+### Landing Page
+
+![QueueFlow Landing Page](./screenshots/landing-page.png)
+
+### Patient Dashboard
+
+![QueueFlow Patient Dashboard](./screenshots/user-dashboard.png)
+
+### Live Token Tracking
+
+![QueueFlow Live Token Tracking](./screenshots/live-token.png)
+
+### Admin Dashboard
+
+![QueueFlow Admin Dashboard](./screenshots/admin-dashboard.png)
 
 ---
 
