@@ -40,14 +40,11 @@ const Dashboard = () => {
                 queueId: queue._id,
             });
 
-            console.log(response.data);
-
             toast.success("Token booked successfully!");
 
             navigate("/user/my-token");
 
         } catch (error) {
-            console.error(error);
 
             // User already has a token
             if (
@@ -65,6 +62,9 @@ const Dashboard = () => {
                 return;
             }
 
+            // Log only unexpected errors
+            console.error(error);
+
             // Other errors
             toast.error(
                 error.response?.data?.message ||
@@ -77,30 +77,30 @@ const Dashboard = () => {
 
     return (
         <>
-        <Navbar/>
-        <div className="min-h-screen bg-background p-8">
-            <h1 className="mb-2 text-4xl font-bold text-secondary">
-                Welcome, {user?.name} 👋
-            </h1>
+            <Navbar />
+            <div className="min-h-screen bg-background p-8">
+                <h1 className="mb-2 text-4xl font-bold text-secondary">
+                    Welcome, {user?.name} 👋
+                </h1>
 
-            <p className="mb-8 text-gray-600">
-                Choose a service to book your token.
-            </p>
+                <p className="mb-8 text-gray-600">
+                    Choose a service to book your token.
+                </p>
 
-            {loading ? (
-                <p>Loading queues...</p>
-            ) : (
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {queues.map((queue) => (
-                        <QueueCard
-                            key={queue._id}
-                            queue={queue}
-                            onBook={handleBook}
-                        />
-                    ))}
-                </div>
-            )}
-        </div>
+                {loading ? (
+                    <p>Loading queues...</p>
+                ) : (
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {queues.map((queue) => (
+                            <QueueCard
+                                key={queue._id}
+                                queue={queue}
+                                onBook={handleBook}
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
         </>
     );
 };
